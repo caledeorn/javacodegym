@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cfanalyzer.controller.CrawlerController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <children>
+        <HBox spacing="10.0" alignment="CENTER_LEFT">
+            <children>
+                <Button mnemonicParsing="false" onAction="#handleCrawlAll" text="Crawl tất cả" />
+                <Button mnemonicParsing="false" onAction="#handleTestConnection" text="Test kết nối" />
+                <Region HBox.hgrow="ALWAYS" />
+                <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0" />
+                <Label fx:id="statusLabel" text="Sẵn sàng" />
+            </children>
+        </HBox>
+        <SplitPane dividerPositions="0.6" VBox.vgrow="ALWAYS">
+            <items>
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Lịch sử Crawl" style="-fx-font-weight: bold;" />
+                        <TableView fx:id="logTable" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="logIdColumn" prefWidth="50.0" text="ID" />
+                                <TableColumn fx:id="userIdColumn" prefWidth="80.0" text="User ID" />
+                                <TableColumn fx:id="typeColumn" prefWidth="100.0" text="Loại" />
+                                <TableColumn fx:id="logStatusColumn" prefWidth="80.0" text="Status" />
+                                <TableColumn fx:id="foundColumn" prefWidth="80.0" text="Tìm thấy" />
+                                <TableColumn fx:id="newColumn" prefWidth="80.0" text="Mới" />
+                                <TableColumn fx:id="startedColumn" prefWidth="150.0" text="Bắt đầu" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Log chi tiết" style="-fx-font-weight: bold;" />
+                        <TextArea fx:id="logArea" editable="false" VBox.vgrow="ALWAYS" wrapText="true" />
+                    </children>
+                </VBox>
+            </items>
+        </SplitPane>
+    </children>
+</VBox>

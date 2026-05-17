@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cfanalyzer.controller.MainController">
+   <children>
+      <TabPane fx:id="mainTabPane" prefHeight="700.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+        <tabs>
+          <Tab text="Quản lý Users">
+            <content>
+                <fx:include source="user_management.fxml" />
+            </content>
+          </Tab>
+          <Tab text="Crawler">
+            <content>
+                <fx:include source="crawler.fxml" />
+            </content>
+          </Tab>
+          <Tab text="Phân tích AI">
+            <content>
+                <fx:include source="analysis.fxml" />
+            </content>
+          </Tab>
+          <Tab text="Báo cáo">
+            <content>
+                <fx:include source="report.fxml" />
+            </content>
+          </Tab>
+          <Tab text="Cài đặt">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>

@@ -1,0 +1,17 @@
+.root {
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 13px;
+}
+
+.table-view {
+    -fx-selection-bar: #e1f5fe;
+    -fx-selection-bar-non-focused: #f5f5f5;
+}
+
+.button {
+    -fx-cursor: hand;
+}
+
+.text-area {
+    -fx-font-family: "Consolas", "Courier New", monospace;
+}
