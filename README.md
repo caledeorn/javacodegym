@@ -53,9 +53,7 @@ Bước 4: mở win + r , sau đó bỏ : msedge.exe --remote-debugging-port=922
 
   Mở Terminal (hoặc CMD/PowerShell) tại thư mục gốc của project:
 
-   1. Dọn dẹp và Biên dịch (Clean & Compile):
-
-   1     mvn clean compile
+   1. Dọn dẹp và Biên dịch (Clean & Compile):mvn clean compile
 
    2. Chạy ứng dụng:
       * Nếu project đã cấu hình plugin JavaFX trong pom.xml, bạn chạy: mvn javafx:run
